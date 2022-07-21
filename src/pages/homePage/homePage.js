@@ -12,11 +12,11 @@ function HomePage() {
     <>
       <MainSection />
       <Services />
-      <Portfolio />
+      {/* <Portfolio />
       <Achievement />
       <TestimonialSlider />
       <GetInTouch />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }

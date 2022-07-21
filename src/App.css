@@ -23,6 +23,14 @@
   }
 }
 
+@media (min-width: 600px) and (max-width: 990px) {
+  .section-container {
+    width: 90%;
+    margin: 5em auto;
+    position: relative;
+  }
+}
+
 @media (min-width: 2560px) {
   .section-container {
     width: 1300px;
