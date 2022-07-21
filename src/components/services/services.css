@@ -1,0 +1,132 @@
+.service {
+  box-sizing: border-box;
+  width: 400px;
+  height: 550px;
+  background: #529fa7;
+  box-shadow: 13px 12px 34px rgba(0, 0, 0, 0.34);
+  border-radius: 4px;
+  transition: all 0.5s;
+  margin: 20px 0;
+}
+
+.service-services-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-container {
+  max-width: 90%;
+  margin: 20px 0;
+  margin-left: 20px;
+}
+
+.service-content h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.service-content p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: justify;
+  color: #ffffff;
+}
+
+.service-content button {
+  margin: 30px 0;
+  width: 127px;
+  height: 50px;
+  border: none;
+
+  background: #ffffff;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+
+  text-align: center;
+  font-feature-settings: "liga" off;
+
+  color: #f25f46;
+}
+
+.service:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 37.11px 109.4px rgba(82, 159, 167, 0.33);
+}
+
+@media (min-width: 600px) {
+  .service {
+    box-sizing: border-box;
+    width: 400px;
+    height: 530px;
+    background: #529fa7;
+    box-shadow: 13px 12px 34px rgba(0, 0, 0, 0.34);
+    border-radius: 4px;
+    transition: all 0.5s;
+  }
+
+  .service-services-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .service-container {
+    width: 86%;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .service-content h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    color: #ffffff;
+    margin: 10px 0;
+  }
+
+  .service-content p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: justify;
+    /* or 156% */
+
+    color: #ffffff;
+  }
+
+  .service-content button {
+    margin-top: 30px;
+    width: 127px;
+    height: 50px;
+    border: none;
+
+    background: #ffffff;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    text-align: center;
+    font-feature-settings: "liga" off;
+
+    color: #f25f46;
+  }
+
+  .service:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 37.11px 109.4px rgba(82, 159, 167, 0.33);
+  }
+}

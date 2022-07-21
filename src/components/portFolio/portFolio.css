@@ -1,0 +1,401 @@
+.portfolio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio-menu {
+  width: 87%;
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  justify-content: space-between;
+  padding: 10px 30px;
+  border-bottom: 1px solid rgb(224, 221, 221);
+}
+.sub-menu {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22px;
+
+  text-align: center;
+  color: #a0a3bd;
+  padding-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.sub-menu:hover {
+  cursor: pointer;
+}
+
+.sub-menu-one {
+  color: #213053;
+}
+
+.sub-menu-two {
+  color: #213053;
+}
+.sub-menu-three {
+  color: #213053;
+}
+.sub-menu-four {
+  color: #213053;
+}
+.sub-menu-five {
+  color: #213053;
+}
+
+.sub-menu-one::after {
+  content: "";
+  top: 60px;
+  position: absolute;
+  width: 230px;
+  left: 0;
+  border: 1px solid #529fa7;
+}
+.sub-menu-two::after {
+  content: "";
+  top: 60px;
+  position: absolute;
+  width: 230px;
+  left: 230px;
+  border: 1px solid #529fa7;
+}
+.sub-menu-three::after {
+  content: "";
+  top: 60px;
+  position: absolute;
+  width: 230px;
+  left: 460px;
+  border: 1px solid #529fa7;
+}
+.sub-menu-four::after {
+  content: "";
+  top: 60px;
+  position: absolute;
+  width: 230px;
+  left: 690px;
+  border: 1px solid #529fa7;
+}
+.sub-menu-five::after {
+  content: "";
+  top: 60px;
+  position: absolute;
+  width: 230px;
+  right: 0;
+  border: 1px solid #529fa7;
+}
+
+.sub-menu-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.sub-menu-icon img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.sub-menu p {
+  margin-left: 20px;
+}
+
+.portfolio {
+  width: 400px;
+  height: 400px;
+}
+
+.portfolio-img {
+  padding: 40px;
+  padding-bottom: 0px;
+  width: 100%;
+  /* height: 400px; */
+  margin-bottom: 0;
+  background: #a0dcff;
+  display: flex;
+  /* vertical-align: middle; */
+  /* border: 1px solid green; */
+}
+
+.portfolio-grey {
+  background: #c0dae5;
+}
+
+.portfolio-green {
+  padding-right: 0;
+  background: #c1e5c0;
+}
+
+.portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-desc {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.portfolio-desc-title {
+  font-size: 18px;
+  line-height: 32px;
+  color: #213053;
+  font-weight: 700;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.portfolio-desc-category {
+  line-height: 26px;
+  /* identical to box height, or 108% */
+
+  font-feature-settings: "liga" off;
+
+  color: #213053;
+
+  opacity: 0.7;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.portfolio-desc-sub-category {
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-desc-sub-category-img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.portfolio-desc-sub-category-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (min-width: 600px) {
+  .portfolio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-menu {
+    width: 87%;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-bottom: 1px solid rgb(224, 221, 221);
+  }
+
+  /* .portfolio-menu-container::after {
+    content: "";
+    width: 200px;
+    border-bottom: 2px solid #529fa7;
+  } */
+
+  .sub-menu {
+    /* position: relative; */
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    /* identical to box height, or 110% */
+
+    text-align: center;
+    color: #a0a3bd;
+    padding-bottom: 20px;
+    transition: all 0.2s ease;
+  }
+
+  .sub-menu:hover {
+    cursor: pointer;
+  }
+
+  .sub-menu-one {
+    color: #213053;
+  }
+
+  .sub-menu-two {
+    color: #213053;
+  }
+  .sub-menu-three {
+    color: #213053;
+  }
+  .sub-menu-four {
+    color: #213053;
+  }
+  .sub-menu-five {
+    color: #213053;
+  }
+
+  .sub-menu-one::after {
+    content: "";
+    top: 60px;
+    position: absolute;
+    width: 230px;
+    left: 0;
+    border: 1px solid #529fa7;
+  }
+  .sub-menu-two::after {
+    content: "";
+    top: 60px;
+    position: absolute;
+    width: 230px;
+    left: 230px;
+    border: 1px solid #529fa7;
+  }
+  .sub-menu-three::after {
+    content: "";
+    top: 60px;
+    position: absolute;
+    width: 230px;
+    left: 460px;
+    border: 1px solid #529fa7;
+  }
+  .sub-menu-four::after {
+    content: "";
+    top: 60px;
+    position: absolute;
+    width: 230px;
+    left: 690px;
+    border: 1px solid #529fa7;
+  }
+  .sub-menu-five::after {
+    content: "";
+    top: 60px;
+    position: absolute;
+    width: 230px;
+    right: 0;
+    border: 1px solid #529fa7;
+  }
+
+  /* .sub-menu::after {
+    content: "";
+    top: 60px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    border: 1px solid #529fa7;
+  } */
+
+  .sub-menu-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .sub-menu-icon img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .sub-menu p {
+    margin-left: 20px;
+  }
+
+  .portfolio {
+    margin: 25px 0px;
+  }
+
+  .portfolio-img {
+    padding: 40px;
+    padding-bottom: 0px;
+    width: 400px;
+    height: 400px;
+    background: #a0dcff;
+    vertical-align: middle;
+  }
+
+  .portfolio-grey {
+    background: #c0dae5;
+  }
+
+  .portfolio-green {
+    padding-right: 0;
+    background: #c1e5c0;
+  }
+
+  .portfolio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .portfolio-desc {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .portfolio-desc-title {
+    font-size: 18px;
+    line-height: 32px;
+    color: #213053;
+    font-weight: 700;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .portfolio-desc-category {
+    line-height: 26px;
+    /* identical to box height, or 108% */
+
+    font-feature-settings: "liga" off;
+
+    color: #213053;
+
+    opacity: 0.7;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
+  .portfolio-desc-sub-category {
+    display: flex;
+    align-items: center;
+  }
+
+  .portfolio-desc-sub-category-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  .portfolio-desc-sub-category-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
