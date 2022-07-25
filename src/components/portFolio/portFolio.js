@@ -1,14 +1,24 @@
 import React, { useState } from "react";
 import "./portFolio.css";
+import portfolioData from "../../utils/portfolioData";
+import { motion } from "framer-motion";
 
 export const Portfolio = () => {
   const [activeMenuList, setActiveMenuList] = useState({
-    all: true,
-    health: false,
-    travel: false,
-    energy: false,
-    sports: false,
+    All: true,
+    Food: false,
+    Travel: false,
+    Energy: false,
+    Sports: false,
   });
+  const [portfolio, setPortfolio] = useState([...portfolioData]);
+  const [filteredPortfolio, setFilteredPortfolio] = useState([
+    ...portfolioData,
+  ]);
+  const categoryIcon = {
+    Travel: "./images/travelIcon.png",
+    Food: "./images/foodIcon.png",
+  };
 
   const getPreviousActiveMenu = () => {
     let returnVal = "";
@@ -29,6 +39,12 @@ export const Portfolio = () => {
       [name]: !value,
       [previousActiveMenu]: !previousActiveValue,
     }));
+    if (name === "All") {
+      setFilteredPortfolio([...portfolioData]);
+    } else {
+      const filterPortfolio = portfolio.filter((el) => el.category === name);
+      setFilteredPortfolio([...filterPortfolio]);
+    }
   };
 
   return (
@@ -40,9 +56,9 @@ export const Portfolio = () => {
         <div className="portfolio-menu">
           <div
             className={
-              activeMenuList.all ? "sub-menu sub-menu-one" : "sub-menu"
+              activeMenuList.All ? "sub-menu sub-menu-one" : "sub-menu"
             }
-            onClick={() => onPortfolioFilterHandler("all")}
+            onClick={() => onPortfolioFilterHandler("All")}
           >
             <div className="sub-menu-icon">
               <img src="./images/allMenuIcon.png" alt="icon" />
@@ -51,11 +67,11 @@ export const Portfolio = () => {
           </div>
           <div
             className={
-              activeMenuList.health
+              activeMenuList.Food
                 ? "sub-menu sub-menu sub-menu-two"
                 : "sub-menu"
             }
-            onClick={() => onPortfolioFilterHandler("health")}
+            onClick={() => onPortfolioFilterHandler("Food")}
           >
             <div className="sub-menu-icon">
               <img src="./images/healthIcon.png" alt="icon" />
@@ -64,9 +80,9 @@ export const Portfolio = () => {
           </div>
           <div
             className={
-              activeMenuList.travel ? "sub-menu sub-menu-three" : "sub-menu"
+              activeMenuList.Travel ? "sub-menu sub-menu-three" : "sub-menu"
             }
-            onClick={() => onPortfolioFilterHandler("travel")}
+            onClick={() => onPortfolioFilterHandler("Travel")}
           >
             <div className="sub-menu-icon">
               <img src="./images/travelIcon.png" alt="icon" />
@@ -75,9 +91,9 @@ export const Portfolio = () => {
           </div>
           <div
             className={
-              activeMenuList.energy ? "sub-menu sub-menu-four" : "sub-menu"
+              activeMenuList.Energy ? "sub-menu sub-menu-four" : "sub-menu"
             }
-            onClick={() => onPortfolioFilterHandler("energy")}
+            onClick={() => onPortfolioFilterHandler("Energy")}
           >
             <div className="sub-menu-icon">
               <img src="./images/energyIcon.png" alt="icon" />
@@ -86,9 +102,9 @@ export const Portfolio = () => {
           </div>
           <div
             className={
-              activeMenuList.sports ? "sub-menu sub-menu-five" : "sub-menu"
+              activeMenuList.Sports ? "sub-menu sub-menu-five" : "sub-menu"
             }
-            onClick={() => onPortfolioFilterHandler("sports")}
+            onClick={() => onPortfolioFilterHandler("Sports")}
           >
             <div className="sub-menu-icon">
               <img src="./images/sportsIcon.png" alt="icon" />
@@ -98,92 +114,35 @@ export const Portfolio = () => {
         </div>
       </div>
 
-      <div className="portfolio-container">
-        <div className="portfolio">
-          <div className="portfolio-img">
-            <img src="./images/iphoneX.png" />
-          </div>
-          <div className="portfolio-desc">
-            <p className="portfolio-desc-title">Jewel Trek</p>
-            <div className="portfolio-desc-sub-category">
-              <div className="portfolio-desc-sub-category-img">
-                <img src="./images/travelIcon.png" />
+      <motion.div layout className="portfolio-container">
+        {filteredPortfolio.map((el, id) => {
+          return (
+            <motion.div layout className="portfolio" key={el.id}>
+              <div
+                className={
+                  el.id === 3 || el.id === 6
+                    ? "portfolio-img portfolio-green"
+                    : "portfolio-img"
+                }
+              >
+                <img src={`${el.image}`} alt="portfolio-img" />
               </div>
-              <p className="portfolio-desc-category">Travel</p>
-            </div>
-          </div>
-        </div>
-        <div className="portfolio">
-          <div className="portfolio-img portfolio-grey">
-            <img src="./images/samsungs92.png" />
-          </div>
-          <div className="portfolio-desc">
-            <p className="portfolio-desc-title">Perfecto</p>
-            <div className="portfolio-desc-sub-category">
-              <div className="portfolio-desc-sub-category-img">
-                <img src="./images/foodIcon.png" />
+              <div className="portfolio-desc">
+                <p className="portfolio-desc-title">{el.name}</p>
+                <div className="portfolio-desc-sub-category">
+                  <div className="portfolio-desc-sub-category-img">
+                    <img
+                      src={`${categoryIcon[el.category]}`}
+                      alt="portfolio-category-img"
+                    />
+                  </div>
+                  <p className="portfolio-desc-category">{el.category}</p>
+                </div>
               </div>
-              <p className="portfolio-desc-category">Food</p>
-            </div>
-          </div>
-        </div>
-        <div className="portfolio">
-          <div className="portfolio-img portfolio-green">
-            <img src="./images/Mockup2.png" />
-          </div>
-          <div className="portfolio-desc">
-            <p className="portfolio-desc-title">Global EMR</p>
-            <div className="portfolio-desc-sub-category">
-              <div className="portfolio-desc-sub-category-img">
-                <img src="./images/healthIcon.png" />
-              </div>
-              <p className="portfolio-desc-category">Food</p>
-            </div>
-          </div>
-        </div>
-        <div className="portfolio">
-          <div className="portfolio-img">
-            <img src="./images/iphoneX.png" />
-          </div>
-          <div className="portfolio-desc">
-            <p className="portfolio-desc-title">Jewel Trek</p>
-            <div className="portfolio-desc-sub-category">
-              <div className="portfolio-desc-sub-category-img">
-                <img src="./images/travelIcon.png" />
-              </div>
-              <p className="portfolio-desc-category">Travel</p>
-            </div>
-          </div>
-        </div>
-        <div className="portfolio">
-          <div className="portfolio-img portfolio-grey">
-            <img src="./images/samsungs92.png" />
-          </div>
-          <div className="portfolio-desc">
-            <p className="portfolio-desc-title">Perfecto</p>
-            <div className="portfolio-desc-sub-category">
-              <div className="portfolio-desc-sub-category-img">
-                <img src="./images/foodIcon.png" />
-              </div>
-              <p className="portfolio-desc-category">Food</p>
-            </div>
-          </div>
-        </div>
-        <div className="portfolio">
-          <div className="portfolio-img portfolio-green">
-            <img src="./images/Mockup2.png" />
-          </div>
-          <div className="portfolio-desc">
-            <p className="portfolio-desc-title">Global EMR</p>
-            <div className="portfolio-desc-sub-category">
-              <div className="portfolio-desc-sub-category-img">
-                <img src="./images/healthIcon.png" />
-              </div>
-              <p className="portfolio-desc-category">Food</p>
-            </div>
-          </div>
-        </div>
-      </div>
+            </motion.div>
+          );
+        })}
+      </motion.div>
     </div>
   );
 };

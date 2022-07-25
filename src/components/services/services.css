@@ -63,7 +63,7 @@
   box-shadow: inset 0px 37.11px 109.4px rgba(82, 159, 167, 0.33);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .service {
     box-sizing: border-box;
     width: 400px;
@@ -128,5 +128,179 @@
   .service:hover {
     cursor: pointer;
     box-shadow: inset 0px 37.11px 109.4px rgba(82, 159, 167, 0.33);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+  .service {
+    box-sizing: border-box;
+    width: 220px;
+    height: 600px;
+    background: #529fa7;
+    box-shadow: 13px 12px 34px rgba(0, 0, 0, 0.34);
+    border-radius: 4px;
+    transition: all 0.5s;
+    margin: 20px 0;
+  }
+
+  .service-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .service-services-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .service-container {
+    max-width: 80%;
+    margin: 20px 0;
+    margin-left: 20px;
+  }
+
+  .service-content h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: #ffffff;
+    margin: 10px 0;
+  }
+
+  .service-content p {
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: left;
+    line-height: 25px;
+    font-weight: 400;
+  }
+
+  .service-content button {
+    margin: 30px 0;
+    width: 127px;
+    height: 50px;
+    border: none;
+
+    background: #ffffff;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+
+    text-align: center;
+    font-feature-settings: "liga" off;
+
+    color: #f25f46;
+  }
+
+  .service:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 37.11px 109.4px rgba(82, 159, 167, 0.33);
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1200px) {
+  .service {
+    box-sizing: border-box;
+    width: 300px;
+    height: 530px;
+    background: #529fa7;
+    box-shadow: 13px 12px 34px rgba(0, 0, 0, 0.34);
+    border-radius: 4px;
+    transition: all 0.5s;
+    margin: 20px 0;
+  }
+
+  .service-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .service-services-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .service-container {
+    max-width: 80%;
+    margin: 20px 0;
+    margin-left: 20px;
+  }
+
+  .service-content h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: #ffffff;
+    margin: 10px 0;
+  }
+
+  .service-content p {
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: left;
+    line-height: 25px;
+    font-weight: 400;
+  }
+
+  .service-content button {
+    margin: 30px 0;
+    width: 127px;
+    height: 50px;
+    border: none;
+
+    background: #ffffff;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+
+    text-align: center;
+    font-feature-settings: "liga" off;
+
+    color: #f25f46;
+  }
+
+  .service:hover {
+    cursor: pointer;
+    box-shadow: inset 0px 37.11px 109.4px rgba(82, 159, 167, 0.33);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .service {
+    box-sizing: border-box;
+    width: 400px;
+    height: 550px;
+    background: #529fa7;
+    box-shadow: 13px 12px 34px rgba(0, 0, 0, 0.34);
+    border-radius: 4px;
+    transition: all 0.5s;
+    margin: 20px 0;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1900px) {
+  .service {
+    width: 350px;
+    height: 560px;
+  }
+
+  .service-services-container {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1900px) {
+  .service-services-container {
+    flex-wrap: nowrap;
   }
 }

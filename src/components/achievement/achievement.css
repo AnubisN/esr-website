@@ -75,7 +75,7 @@
   margin: 4em 0;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .unique-section {
     background-color: #529fa7;
     height: 300px;
@@ -153,7 +153,84 @@
   }
 }
 
-@media (min-width: 2560px) {
+@media (min-width: 600px) and (max-width: 990px) {
+  .unique-section {
+    background-color: #529fa7;
+    height: 250px;
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+  }
+
+  .unique-section h2 {
+    color: white;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 84px;
+  }
+
+  .hexagon {
+    position: relative;
+    width: 120px;
+    height: 69.28px;
+    background-color: #fff;
+    margin: 34.64px 0;
+  }
+
+  .hexagon:before,
+  .hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+  }
+
+  .hexagon:before {
+    bottom: 100%;
+    border-bottom: 34.64px solid #fff;
+  }
+
+  .hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 34.64px solid #fff;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .txt {
+    text-align: center;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #213053;
+  }
+
+  .txt-in {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .achievements-container {
+    width: 90%;
+    margin-bottom: 6em;
+  }
+
+  .hexagon-container {
+    margin: -4.5em 10px;
+  }
+}
+
+@media (min-width: 1930px) {
   .achievements-container {
     width: 1300px;
     margin: 0 auto;

@@ -2,12 +2,13 @@ import React from "react";
 import "./footer.css";
 
 function Footer() {
+  // console.log(document.getElementById("wrapper").offsetWidth);
   return (
     <footer className="footer-section">
       <div className="footer-whole-container">
         <div className="footer-container">
           <div className="footer-btn-container">
-            <div className="footer-btn-wrapper">
+            <div id="wrapper" className="footer-btn-wrapper">
               <button className="footer-btn">Let's Talk</button>
             </div>
           </div>
