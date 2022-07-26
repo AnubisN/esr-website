@@ -50,7 +50,7 @@
   display: none;
 }
 
-@media screen and (max-width: 960px) {
+@media (max-width: 960px) {
   .navbarItems {
     position: relative;
   }
@@ -138,6 +138,12 @@
   }
   .nav-btn {
     display: none;
+  }
+}
+
+@media (min-width: 1600px) {
+  .navbarItems {
+    width: 70%;
   }
 }
 

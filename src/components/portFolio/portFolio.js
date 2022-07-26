@@ -30,10 +30,25 @@ export const Portfolio = () => {
     return returnVal;
   };
 
+  const checkActiveMenu = () => {
+    let keyName = "";
+    let count = 0;
+    for (const key in activeMenuList) {
+      if (activeMenuList[key] === true) {
+        keyName = key;
+        count++;
+      }
+    }
+    if (count === 1) return keyName;
+    return null;
+  };
+
   const onPortfolioFilterHandler = (name) => {
     const value = activeMenuList[name];
     const previousActiveMenu = getPreviousActiveMenu();
     const previousActiveValue = activeMenuList[previousActiveMenu];
+    const isActiveMenu = checkActiveMenu();
+    if (isActiveMenu === name) return;
     setActiveMenuList((defaultState) => ({
       ...defaultState,
       [name]: !value,
@@ -42,7 +57,7 @@ export const Portfolio = () => {
     if (name === "All") {
       setFilteredPortfolio([...portfolioData]);
     } else {
-      const filterPortfolio = portfolio.filter((el) => el.category === name);
+      const filterPortfolio = portfolio.filter((el) => el.category === "Food");
       setFilteredPortfolio([...filterPortfolio]);
     }
   };

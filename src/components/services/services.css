@@ -206,7 +206,7 @@
 @media (min-width: 960px) and (max-width: 1200px) {
   .service {
     box-sizing: border-box;
-    width: 300px;
+    width: 250px;
     height: 530px;
     background: #529fa7;
     box-shadow: 13px 12px 34px rgba(0, 0, 0, 0.34);
@@ -278,7 +278,7 @@
 @media (min-width: 1200px) and (max-width: 1600px) {
   .service {
     box-sizing: border-box;
-    width: 400px;
+    width: 350px;
     height: 550px;
     background: #529fa7;
     box-shadow: 13px 12px 34px rgba(0, 0, 0, 0.34);

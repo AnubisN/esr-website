@@ -16,8 +16,9 @@ const MainSection = () => {
               We Build <span>Technology</span> Based Solution
             </h1>
             <p className="paragraphMainSection">
-              With lots of unique blocks, you can easily build a page <br />{" "}
-              without coding. Build your next website fast.
+              We recognize the differences in each company we work with and help
+              them build <br />
+              customized software solutions according to their needs.
             </p>
             <button className="buttonMainSection">Get a Free Proposal</button>
           </div>

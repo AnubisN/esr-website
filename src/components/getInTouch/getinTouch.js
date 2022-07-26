@@ -152,20 +152,20 @@ const GetInTouch = () => {
               </div>
               <div className="info-location">
                 <div className="info-location-details">
-                  <p>CALIFORNIA, USA</p>
-                  <p>KANSAS, USA</p>
-                  <p>TEXAS, USA</p>
-                  <p>SINGAPORE, SINGAPORE</p>
-                  <p>KATHMANDU, NEPAL</p>
+                  <p>California, USA</p>
+                  <p>Kansas, USA</p>
+                  <p>Texas, USA</p>
+                  <p>Singapore</p>
+                  <p>Kathmandu, NEPAL</p>
                   <div className="info-social-medias">
                     <div className="social-media">
-                      <img src="./images/Twitter.png" />
+                      <img src="./images/facebook.png" />
                     </div>
                     <div className="social-media">
                       <img src="./images/Linkedin.png" />
                     </div>
                     <div className="social-media">
-                      <img src="./images/Youtube.png" />
+                      <img src="./images/instagram.png" />
                     </div>
                   </div>
                 </div>

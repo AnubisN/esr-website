@@ -1,4 +1,4 @@
-const dataSlider = [
+const portfolioData = [
   {
     id: 1,
     name: "Jewel Trek",
@@ -37,4 +37,4 @@ const dataSlider = [
   },
 ];
 
-export default dataSlider;
+export default portfolioData;
